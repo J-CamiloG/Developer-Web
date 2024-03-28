@@ -133,6 +133,36 @@ body {
     padding-inline: 1em;
 }
 
+.nav:after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    height: .05em;
+    width: 100%;
+    bottom: 0;
+    background-color: $color-resaltado-500;
+}
+h2{
+    color: $color-gray;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: .8;
+}
+p{
+    max-width: 500px;
+    text-wrap: balance;
+    font-size: 17px;
+    color: $color-paragraph ;
+
+}
+
+i,section,div,a,p,h2{
+    user-select: none;
+}
+.seccion_container{
+    margin-top: 400px;
+}
+// styles local
 .hero {
     min-height: 60vh;
     background-image:url("https://images.unsplash.com/photo-1520078452277-0832598937e5?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -206,37 +236,11 @@ body {
         }
     }
 }
-
-.nav:after {
-    content: '';
-    position: absolute;
-    opacity: 0;
-    height: .05em;
-    width: 100%;
-    bottom: 0;
-    background-color: $color-resaltado-500;
-}
-h2{
-    color: $color-gray;
-    font-size: 35px;
-    font-weight: 700;
-    line-height: .8;
-}
-p{
-    max-width: 500px;
-    text-wrap: balance;
-    font-size: 17px;
-    color: $color-paragraph ;
-
+.nav_mobile{
+    display: none;
 }
 
-i,section,div,a,p,h2{
-    user-select: none;
-}
-.seccion_container{
-    margin-top: 400px;
-}
-// styles local
+
 .main{
     
     .about_me{
@@ -514,4 +518,32 @@ i,section,div,a,p,h2{
 
 
 
+// we create the media screem 
+@media (max-width: 600px) {
+    /* … */
+    .nav{
+        display: none;
+    }
+    .nav_mobile{
+        width: 100%;
+        position: sticky;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .item_mobile{
+            width: 40%;
+            display: none;
+            flex-direction: column;
+            list-style: none;
+            gap: 30px;
+            padding: 20px;
+            background-color: rgba(128, 128, 128, 0.74);
 
+            a{
+                color: $color-white;
+                font-weight: 700;
+                text-decoration: none;
+            }
+        }
+    }
+}

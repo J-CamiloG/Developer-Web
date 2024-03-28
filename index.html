@@ -27,11 +27,24 @@
   <div class="hero">
     <h1><i class="fa-solid fa-ghost"></i>Hi, I'am Juan Camilo. <span>Developer</span> <span class="typed"></span></h1>
   </div>
-  <!--we create navabar-->
+  <!--we create navabar desktop -->
   <nav class="nav">
     <div class="logo">JC</div>
     <!-- list navegation  items-->
-    <ul>
+    <ul class="item_desktop">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Project</a></li>
+      <li><a href="#">Expirience</a></li>
+      <li><a href="#">Achievements</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <!--we create the nav for mobile-->
+  <nav class="nav_mobile">
+    <i class="fa-solid fa-bars icon_open"></i>
+    <ul class="item_mobile">
+      <i class="fa-solid fa-xmark icon_close"></i>
       <li><a href="#">Home</a></li>
       <li><a href="#">About Me</a></li>
       <li><a href="#">Project</a></li>
@@ -527,6 +540,24 @@
           performers in Team International's Top Gun Load, underscoring my aptitude for overcoming challenges and
           achieving success in large-scale projects.</P>
       </article>
+    </section>
+    <!--we create a section for contact me-->
+    <section class="contact">
+      <form action="mail.php" method="POST">
+        <label for="Nombre">Nombre</label>
+        <input type="text" name="name">
+
+        <label for="email">email</label>
+        <input type="email" name="email">
+
+        <label for="subject">asunto</label>
+        <input type="text" name="subject">
+
+        <label for="comentarios">comentario</label>
+        <textarea name="comments"  cols="15" rows="5"></textarea>
+
+        <input type="submit" value="Enviar">
+      </form>
     </section>
   </main>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
