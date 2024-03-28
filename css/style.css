@@ -88,14 +88,6 @@
     opacity: 1;
   }
 }
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
@@ -415,12 +407,20 @@ i, section, div, a, p, h2 {
 .main .skills .logos_container {
   overflow: hidden;
   display: flex;
+  gap: 60px;
   position: relative;
 }
 .main .skills .logos_container .logos_slide {
   display: flex;
   gap: 60px;
-  animation: slide 35s infinite linear;
+  animation: slide 15s linear infinite;
+}
+.main .skills .logos_container .logos_slide .slide {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #343434;
 }
 .main .skills .logos_container .logos_slide .slide svg {
   height: 50px;

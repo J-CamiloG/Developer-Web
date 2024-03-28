@@ -14,6 +14,17 @@
   <script src="https://kit.fontawesome.com/72b50117bf.js" crossorigin="anonymous"></script>
   <!--links sass-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.9.2/sass.min.js"></script>
+  <!--scrip from-->
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "PFYYhQyjINkQAOJ0z",
+        });
+    })();
+  </script>
   <!--link estilos-->
   <link rel="stylesheet" href="/css/style.css" />
   <title>Document</title>
@@ -23,7 +34,7 @@
   <!--we create the header os the page -->
   <!-- we crate the hero-->
   <div class="hero">
-    <h1><i class="fa-solid fa-ghost"></i>Hi, I'am Juan Camilo. <span>Developer</span> <span class="typed"></span></h1>
+    <h1><i class="fa-solid fa-ghost"></i>Hi, I'am Juan Camilo. <span>Developer</span> <br> <span class="typed"></span></h1>
   </div>
   <!--we create navabar desktop -->
   <nav class="nav">
@@ -334,8 +345,7 @@
               </defs>
             </svg>
           </div>
-        </div>
-        <div class="logos_slide">
+          <!------------------------------------------------>
           <!--logo html-->
           <div class="slide">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
@@ -541,18 +551,18 @@
     </section>
     <!--we create a section for contact me-->
     <section class="contact">
-      <form action="mail.php" method="POST">
+      <form id="form">
         <label for="Nombre">Nombre</label>
-        <input type="text" name="name">
+        <input id="name" type="text" name="name">
 
         <label for="email">email</label>
-        <input type="email" name="email">
-
-        <label for="subject">asunto</label>
-        <input type="text" name="subject">
+        <input id="email" type="email" name="email">
+<!-- 
+        <label for="asunto">asunto</label>
+        <input id="asunto" type="text" name="asunto"> -->
 
         <label for="comentarios">comentario</label>
-        <textarea name="comments"  cols="15" rows="5"></textarea>
+        <textarea id="comentario" name="comments"  cols="15" rows="5"></textarea>
 
         <input type="submit" value="Enviar">
       </form>

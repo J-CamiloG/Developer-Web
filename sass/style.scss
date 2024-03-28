@@ -111,14 +111,20 @@ $color-white:#F9F6EF;
 }
 
 //animation slider skills
-@keyframes slide {
-    from{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(-100%);
-    }
-}
+// @keyframes slide {
+//     0% {
+//         transform: translateX(100%);
+//     }
+//     100%{
+//         transform: translateX(-500%);
+//     }
+//     // from{
+//     //     transform: translateX(0);
+//     // }
+//     // to{
+//     //     transform: translateX(-100%);
+//     // }
+// }
 //styles globals
 body {
     font-family: $tipo-letra;
@@ -483,16 +489,28 @@ i,section,div,a,p,h2{
         .logos_container{
             overflow: hidden;
             display: flex;
+            gap: 60px;
             position: relative;
             .logos_slide{
+                // width: 500%;
                 display: flex;
                 gap: 60px;
-                animation: slide 35s infinite linear;
+                // display: flex;
+                animation: slide 15s linear infinite ;
 
-                .slide svg{
-                    height: 50px;
-                    width: 50px;
+                .slide{
+                    flex:1;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    color:#343434;
+                    
+                    svg{
+                        height: 50px;
+                        width: 50px;
+                    }
                 }
+                
             }
         }
         .logos_container::before,
