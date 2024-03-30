@@ -101,6 +101,10 @@
     transform: translateX(-2160px);
   }
 }
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
@@ -417,44 +421,166 @@ i, section, div, a, p, h2 {
 .main .expirience .expirience_container_items .cart_container .cart_button button:hover {
   background-color: rgba(255, 255, 255, 0.1019607843);
 }
-.main .skills .logos_container {
-  overflow: hidden;
+.main .slide-option {
   display: flex;
-  gap: 60px;
+  flex-flow: column;
+  align-items: center;
+}
+.main .slide-option .container {
+  transition: all 0.3s ease;
+}
+.main .slide-option .highway-slider {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+}
+.main .slide-option .highway-slider .highway-barrier {
+  overflow: hidden;
   position: relative;
 }
-.main .skills .logos_container .logos_slide {
+.main .slide-option .highway-slider .highway-barrier ul.highway-lane {
   display: flex;
-  gap: 60px;
-  animation: slide 15s linear infinite;
+  height: 100%;
 }
-.main .skills .logos_container .logos_slide .slide {
+.main .slide-option .highway-slider .highway-barrier ul.highway-lane li.highway-car {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #343434;
+  color: #ffffff;
 }
-.main .skills .logos_container .logos_slide .slide svg {
-  height: 50px;
-  width: 50px;
+.main .slide-option .highway-slider ul.highway-barrier ul.highway-lane {
+  width: 500%;
 }
-.main .skills .logos_container::before,
-.main .skills .logos_container::after {
+.main .slide-option .highway-slider ul.highway-barrier ul.highway-lane li.highway-car {
+  animation: translatestf 30s linear infinite;
+}
+.main .slide-option #infinite .highway-barrier::before,
+.main .slide-option #infinite .highway-barrier::after {
+  content: " ";
   position: absolute;
-  width: 50px;
+  z-index: 9;
+  width: 180px;
   height: 100%;
+}
+.main .slide-option #infinite .highway-barrier::before {
   top: 0;
-  content: "";
-  z-index: 2;
-}
-.main .skills .logos_container::before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), #0f0f0f);
+  background: linear-gradient(to right, #0f0f0f 0%, rgba(255, 255, 255, 0) 30%);
 }
-.main .skills .logos_container::after {
+.main .slide-option #infinite .highway-barrier::after {
+  top: 0;
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), #0f0f0f);
+  background: linear-gradient(to left, #0f0f0f 0%, rgba(255, 255, 255, 0) 30%);
+}
+.main .slide-option #infinite ul.highway-lane {
+  width: 4320px;
+}
+.main .slide-option #infinite ul.highway-lane li.highway-car {
+  width: 180px;
+  animation: translateinfinite 25s linear infinite;
+}
+.main .slide-option #infinite ul.highway-lane li.highway-car svg {
+  width: 50px;
+  height: 50px;
+}
+.main .contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 1px #df5454;
+  padding: 20px 0px;
+  margin-bottom: 100px;
+}
+.main .contact .socials {
+  display: flex;
+  margin-top: 40px;
+  gap: 10px;
+}
+.main .contact .socials .socials_button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: auto;
+  border-radius: 20px;
+  padding: 7px 18px;
+  color: #F9F6EF;
+  background-color: rgba(128, 128, 128, 0.178);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 200ms;
+  text-decoration: none;
+}
+.main .contact .socials .socials_button i {
+  font-size: 22px;
+  color: #ec7d7d;
+}
+.main .contact .socials .socials_button:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1019607843);
+}
+.main .contact .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 15px 5px;
+  background-color: rgba(128, 128, 128, 0.185);
+  width: 350px;
+}
+.main .contact .form fieldset {
+  width: 80%;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #df5454;
+}
+.main .contact .form fieldset input, .main .contact .form fieldset textarea {
+  resize: none;
+  width: 100%;
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(68, 68, 68, 0.671);
+  color: white;
+}
+.main .contact .form fieldset input[type=text]:focus {
+  outline: none;
+}
+.main .contact .form fieldset input[type=email]:focus {
+  outline: none;
+}
+.main .contact .form fieldset textarea:focus {
+  outline: none;
+}
+.main .contact .form .button_submit {
+  cursor: pointer;
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #df5454;
+  color: white;
+}
+.main .contact .form .button_submit:hover {
+  background-color: #cb3737;
+}
+
+.footer {
+  background-color: #141414;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
 }
 
 @media (max-width: 600px) {
@@ -483,73 +609,6 @@ i, section, div, a, p, h2 {
     font-weight: 700;
     text-decoration: none;
   }
-}
-.slide-option {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-.slide-option .container {
-  transition: all 0.3s ease;
-}
-
-.highway-slider {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 150px;
-}
-.highway-slider .highway-barrier {
-  overflow: hidden;
-  position: relative;
-}
-.highway-slider .highway-barrier ul.highway-lane {
-  display: flex;
-  height: 100%;
-}
-.highway-slider .highway-barrier ul.highway-lane li.highway-car {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-}
-
-.highway-slider ul.highway-barrier ul.highway-lane {
-  width: 500%;
-}
-.highway-slider ul.highway-barrier ul.highway-lane li.highway-car {
-  animation: translatestf 30s linear infinite;
-}
-
-#infinite .highway-barrier::before,
-#infinite .highway-barrier::after {
-  content: " ";
-  position: absolute;
-  z-index: 9;
-  width: 180px;
-  height: 100%;
-}
-#infinite .highway-barrier::before {
-  top: 0;
-  left: 0;
-  background: linear-gradient(to right, #0f0f0f 0%, rgba(255, 255, 255, 0) 30%);
-}
-#infinite .highway-barrier::after {
-  top: 0;
-  right: 0;
-  background: linear-gradient(to left, #0f0f0f 0%, rgba(255, 255, 255, 0) 30%);
-}
-#infinite ul.highway-lane {
-  width: 4320px;
-}
-#infinite ul.highway-lane li.highway-car {
-  width: 180px;
-  animation: translateinfinite 25s linear infinite;
-}
-#infinite ul.highway-lane li.highway-car svg {
-  width: 50px;
-  height: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

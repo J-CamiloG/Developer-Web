@@ -347,7 +347,7 @@
             </li>
 
             <!--------------------------------------------------------->
-            
+
             <!--items 1 -->
             <li class="highway-car">
               <svg viewBox="0 0 256 366" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
@@ -553,24 +553,47 @@
       </article>
     </section>
     <!--we create a section for contact me-->
-    <section class="contact">
-      <form id="form">
-        <label for="Nombre">Nombre</label>
-        <input id="name" type="text" name="name">
+    <section class="contact seccion_container">
+      <!--contat text-->
+      <article class="contact_txt">
+        <h2><i class="fa-solid fa-envelope"></i> Contact Me</h2>
+        <p>
+          If you have any questions, an interesting project to discuss, or simply want to say hello, I'd be delighted to
+          hear from you! Feel free to send me a message using the contact form below. I look forward to connecting with
+          you and exploring exciting possibilities together.</p>
+        <div class="socials">
+          <a href="#" class="socials_button"><i class="fa-brands fa-github"></i>Github</a>
+          <a href="#" class="socials_button"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
+          <a href="#" class="socials_button"><i class="fa-solid fa-file-arrow-down"></i>Download resume</a>
+        </div>
+      </article>
+      
+      <form id="form" class="form">
+        <fieldset>
+          <legend>Frist name</legend>
+          <input autocomplete="off" id="name" type="text" name="name" placeholder="Your frist Name">
+        </fieldset>
 
-        <label for="email">email</label>
-        <input id="email" type="email" name="email">
-        <!-- 
-        <label for="asunto">asunto</label>
-        <input id="asunto" type="text" name="asunto"> -->
+        <fieldset>
+          <legend>Email address</legend>
+          <input autocomplete="off" id="email" type="email" name="email" placeholder="Your email address">
+        </fieldset>
 
-        <label for="comentarios">comentario</label>
-        <textarea id="comentario" name="comments" cols="15" rows="5"></textarea>
+        <fieldset>
+          <legend>Message</legend>
+          <textarea autocomplete="none" id="comentario" name="comments" cols="15" rows="5" ></textarea>
+        </fieldset>
 
-        <input type="submit" value="Enviar">
+        <input class="button_submit" type="submit" value="Enviar">
       </form>
     </section>
   </main>
+
+  <!--we create footer for  the page -->
+  <footer class="footer">
+    &copy; 2024 - Web Developer Portfolio. All rights reserved | Design by <span>Juan Camilo Campillo</span>
+    © 2021 - Developed by <strong>Juan Camilo Campillo</strong>
+  </footer>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="/js/main.js"></script>
