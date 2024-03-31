@@ -123,6 +123,9 @@ $color-white:#F9F6EF;
 *{
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: $tipo-letra;
     margin: 0;
@@ -247,6 +250,7 @@ i,section,div,a,p,h2{
 .main{
     
     .about_me{
+        scroll-margin-top: 8ex;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -321,6 +325,7 @@ i,section,div,a,p,h2{
     }
 
     .projects{
+        scroll-margin-top: 8ex;
 
         .project_container_items{
             border-radius: solid rgb(255, 10, 10);
@@ -427,7 +432,7 @@ i,section,div,a,p,h2{
     }
 
     .expirience{
-
+        scroll-margin-top: 8ex;
         .expirience_container_items{
             display: flex;
             justify-content: space-between;
@@ -482,6 +487,7 @@ i,section,div,a,p,h2{
     }
 
     .slide-option {
+        scroll-margin-top: 8ex;
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -561,7 +567,12 @@ i,section,div,a,p,h2{
         }
     }
     
+    .achievement{
+        scroll-margin-top: 8ex;
+    }
+
     .contact{
+        scroll-margin-top: 8ex;
         display: flex;
         justify-content: space-between;
         align-items: center;
