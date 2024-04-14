@@ -226,7 +226,7 @@ i, section, div, a, p, h2 {
 }
 
 .main .about_me {
-  scroll-margin-top: 8ex;
+  scroll-margin-top: 15ex;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -292,7 +292,7 @@ i, section, div, a, p, h2 {
   object-fit: cover;
 }
 .main .projects {
-  scroll-margin-top: 8ex;
+  scroll-margin-top: 15ex;
 }
 .main .projects .project_container_items {
   border-radius: solid rgb(255, 10, 10);
@@ -386,7 +386,7 @@ i, section, div, a, p, h2 {
   grid-row: 3/4;
 }
 .main .expirience {
-  scroll-margin-top: 8ex;
+  scroll-margin-top: 15ex;
 }
 .main .expirience .expirience_container_items {
   display: flex;
@@ -433,10 +433,11 @@ i, section, div, a, p, h2 {
   background-color: rgba(255, 255, 255, 0.1019607843);
 }
 .main .slide-option {
-  scroll-margin-top: 8ex;
+  scroll-margin-top: 15ex;
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin-top: 40px;
 }
 .main .slide-option .container {
   transition: all 0.3s ease;
@@ -498,7 +499,49 @@ i, section, div, a, p, h2 {
   height: 50px;
 }
 .main .achievement {
-  scroll-margin-top: 8ex;
+  scroll-margin-top: 15ex;
+}
+.main .achievement .achievement_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.main .achievement .achievement_img h3 {
+  color: #cb3737;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.main .achievement .achievement_img p {
+  color: rgb(204, 204, 204);
+}
+.main .achievement .achievement_img .img_and_txt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.main .achievement .achievement_img .item1 img {
+  width: 400px;
+  border-radius: 20px;
+}
+.main .achievement .achievement_img .item2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .achievement .achievement_img .item2 .imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 20px;
+}
+.main .achievement .achievement_img .item2 .imgs img {
+  width: 400px;
+  border-radius: 20px;
 }
 .main .contact {
   scroll-margin-top: 8ex;
