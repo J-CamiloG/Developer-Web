@@ -353,13 +353,16 @@ i, section, div, a, p, h2 {
   font-size: 12px;
   color: #777;
   line-height: 1.4;
+  margin-bottom: 2rem;
 }
 .main .projects .project_container_items .card .card__content .card__button {
   padding: 15px;
   border-radius: 8px;
-  background: #777;
+  background: #4b4b4b;
   border: none;
   color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 .main .projects .project_container_items .card .card__content .secondary {
   background: transparent;

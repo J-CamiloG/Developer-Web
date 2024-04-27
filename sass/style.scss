@@ -391,14 +391,17 @@ i,section,div,a,p,h2{
                             font-size: 12px;
                             color: #777;
                             line-height: 1.4;
+                            margin-bottom: 2rem;
                         }
     
-                            .card__button {
+                        .card__button {
                             padding: 15px;
                             border-radius: 8px;
-                            background: #777;
+                            background: #4b4b4b;
                             border: none;
                             color: white;
+                            text-decoration: none;
+                            cursor: pointer;
                         }
     
                         .secondary {
