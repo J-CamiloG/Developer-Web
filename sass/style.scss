@@ -435,6 +435,7 @@ i,section,div,a,p,h2{
     }
 
     .expirience{
+        display: none;
         scroll-margin-top: 15ex;
         .expirience_container_items{
             display: flex;
@@ -729,8 +730,7 @@ i,section,div,a,p,h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
 }
 
